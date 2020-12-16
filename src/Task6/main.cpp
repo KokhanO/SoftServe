@@ -1,13 +1,16 @@
-#include "Validator.h"
 #include <iostream>
 #include <thread>
-#include <chrono>
 
-void count(long long b, long long a, long long* res)
+#include "ConsoleInteraction.h"
+#include "Validator.h"
+
+
+void countLuckyTicketsInRange(long long b, long long a, int* res)
 {
 	while (b <= a)
 	{
-		if ((((b % 10000) / 1000) + ((b % 100000) / 10000) + ((b % 1000000) / 100000)) == (((b % 1000) / 100) + ((b % 100) / 10) + (b % 10)))
+		if ((((b % 10000) / 1000) + ((b % 100000) / 10000) + ((b % 1000000) / 100000)) ==
+			(((b % 1000) / 100) + ((b % 100) / 10) + (b % 10)))
 		{
 			++(*res);
 		}
@@ -15,24 +18,36 @@ void count(long long b, long long a, long long* res)
 	}
 }
 
-using namespace std;
-using namespace std::chrono;
 
-int main()
+int main(int argc, char** argv)
 {
-	//79499
-	long long a;
-	std::cin >> a;
-	long long b = 0;
-	long long tmp1 = 0;
-	long long tmp2 = 0;
 
-	high_resolution_clock::time_point t1 = high_resolution_clock::now();
-	std::thread th(count, b, a/2, &tmp1);
-	count(a / 2 + 1, a, &tmp2);
+	long long ticketsRange;
+	if (2 != argc ||
+		6 != std::string(argv[1]).size() ||
+		true != Validator::TryParseToLongLong(std::string(argv[1]), ticketsRange)||
+		0 > ticketsRange)
+	{
+		ConsoleInteraction::Manual();
+		return 0;
+	}
+
+	int luckyTickets = 0;
+
+	int tmpLTicketsThread1 = 0;
+	std::thread th(countLuckyTicketsInRange, 0, ticketsRange / 2, &tmpLTicketsThread1);
+
+	int tmpLTicketsThread2 = 0;
+	countLuckyTicketsInRange(ticketsRange / 2 + 1, ticketsRange, &tmpLTicketsThread2);
+
 	th.join();
-	high_resolution_clock::time_point t2 = high_resolution_clock::now();
-	auto duration = duration_cast<microseconds>(t2 - t1).count();
 
-	std::cout << duration << '\t' << tmp1+tmp2;
+	luckyTickets = tmpLTicketsThread1 + tmpLTicketsThread2;
+	std::cout << "There is " << luckyTickets << " Lucky Tickets in range from ";
+	std::cout.width(6);
+	std::cout.fill('0');
+	std::cout << 0 << " to ";
+	std::cout.width(6);
+	std::cout.fill('0');
+	std::cout << ticketsRange << std::endl;
 }
