@@ -1,24 +1,33 @@
 #include <iostream>
+#include "ConsoleInteraction.h"
+#include "Validator.h"
 
-using namespace std;
 
-int main()
+
+int main(int argc, char** argv)
 {
-	unsigned long long a;
-	unsigned long long b;
-
-	cin >> a;
-	cin.ignore(255, ',');
-	cin >> b;
-	unsigned long long arr[2];
-	arr[0] = 0;
-	arr[1] = 1;
-	for (int i = 0; arr[i % 2] <= b;++i)
+	long long bottomBoundaty;
+	long long topBoundary;
+	if (3 != argc ||
+		true != Validator::TryParseToLongLong(std::string(argv[1]), bottomBoundaty) ||
+		true != Validator::TryParseToLongLong(std::string(argv[2]), topBoundary) ||
+		bottomBoundaty > topBoundary ||
+		bottomBoundaty < 0)
 	{
-		if (arr[i % 2] >= a)
+		ConsoleInteraction::Manual();
+		return 0;
+	}
+
+	unsigned long long FibonacciNumbers[2];
+	FibonacciNumbers[0] = 0;
+	FibonacciNumbers[1] = 1;
+	for (int i = 0; FibonacciNumbers[i % 2] <= topBoundary; ++i)
+	{
+		if (FibonacciNumbers[i % 2] >= bottomBoundaty)
 		{
-			cout << arr[i % 2] << endl;
+			std::cout << FibonacciNumbers[i % 2] << std::endl;
 		}
-		arr[i % 2] = arr[(i + 1) % 2] + arr[i % 2];
+
+		FibonacciNumbers[i % 2] = FibonacciNumbers[(i + 1) % 2] + FibonacciNumbers[i % 2];
 	}
 }
