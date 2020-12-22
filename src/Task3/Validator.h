@@ -1,5 +1,5 @@
 #pragma once
-
+#include <climits>
 #include <string>
 namespace Validator {
 	bool TryParseToUShort(const std::string data, unsigned short& outNum)
