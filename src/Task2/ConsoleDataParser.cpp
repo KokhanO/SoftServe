@@ -4,8 +4,6 @@
 
 bool ConsoleDataParser::TryParseConsoleData(float arr[], const int size)
 {
-	do
-	{
 		std::string tmp;
 		for (int i = 0; i < size; ++i)
 		{
@@ -19,7 +17,5 @@ bool ConsoleDataParser::TryParseConsoleData(float arr[], const int size)
 		}
 
 		return true;
-
-	} while (false);
 
 }

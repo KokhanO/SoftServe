@@ -25,7 +25,7 @@ int main(int argc, char** argv)
 	{
 		if (FibonacciNumbers[i % 2] >= bottomBoundaty)
 		{
-			std::cout << FibonacciNumbers[i % 2] << std::endl;
+			std::cout << FibonacciNumbers[i % 2] << '\n';
 		}
 
 		FibonacciNumbers[i % 2] = FibonacciNumbers[(i + 1) % 2] + FibonacciNumbers[i % 2];

@@ -5,7 +5,7 @@ namespace ConsoleInteraction
 {
 	void coutManual();
 	
-	Triangle getTriangle();
+	Triangle* getTriangle();
 	
 	bool cinContinueProgram();
 

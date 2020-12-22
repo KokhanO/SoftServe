@@ -4,13 +4,14 @@
 
 void TriangleCollection::AddTriangle()
 {
-	try 
+	Triangle* a = ConsoleInteraction::getTriangle();
+	if (a)
 	{
-		triangle_collection_.insert(ConsoleInteraction::getTriangle());
+		triangle_collection_.insert(*a);
 	}
-	catch(...)
+	else
 	{
-		std::cout << "Wrong data!" << std::endl;
+		std::cout << "couldn't create such triangle!" << std::endl;
 	}
 }
 

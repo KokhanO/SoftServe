@@ -1,5 +1,5 @@
 #pragma once
-#include "Shape2D.h"
+#include "2DShape.h"
 
 class Letter:public Shape2D
 {

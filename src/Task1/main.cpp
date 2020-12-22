@@ -12,8 +12,8 @@ void coutManual()
 int main(int argc, char** argv)
 {
 
-	bool trigger = false;
 	unsigned short arr[2];
+	bool trigger = false;
 	do
 	{
 		if (3 != argc)
@@ -23,7 +23,7 @@ int main(int argc, char** argv)
 
 		for (int i = 1; i < argc; ++i)
 		{
-			if (!(Validator::TryParseToUShort(string(argv[i]), arr[i - 1])))
+			if (!(Validator::TryParseToUShort(string(argv[i]), arr[i - 1])) || arr[i - 1] > 100)
 			{
 				break;
 			}
@@ -35,7 +35,7 @@ int main(int argc, char** argv)
 
 	if (trigger)
 	{
-		ChessBoard CB(arr[0], arr[1]);
+		ChessBoard CB(arr[0], arr[1]); // нужно ли покрывать юнит тестами конструктор, если используется валидатор
 		WhiteCell WC('q');
 		BlackCell BC('w');
 		CB.fillBoard(WC, BC);

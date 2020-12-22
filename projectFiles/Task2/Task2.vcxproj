@@ -145,13 +145,13 @@
     <ClCompile Include="..\..\src\Task2\ConsoleDataParser.cpp" />
     <ClCompile Include="..\..\src\Task2\Letter.cpp" />
     <ClCompile Include="..\..\src\Task2\main.cpp" />
-    <ClCompile Include="..\..\src\Task2\Shape2D.cpp" />
+    <ClCompile Include="..\..\src\Task2\2DShape.cpp" />
     <ClCompile Include="..\..\src\Task2\ConsoleInteraction.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\Task2\ConsoleDataParser.h" />
     <ClInclude Include="..\..\src\Task2\Letter.h" />
-    <ClInclude Include="..\..\src\Task2\Shape2D.h" />
+    <ClInclude Include="..\..\src\Task2\2DShape.h" />
     <ClInclude Include="..\..\src\Task2\ConsoleInteraction.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

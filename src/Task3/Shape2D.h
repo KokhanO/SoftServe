@@ -1,17 +1,17 @@
 #pragma once
-class Shape2D
+class ShapeTwoD
 {
 public:
-	Shape2D() = delete;
-	Shape2D(float perimeter = 0, float square = 0);
-	~Shape2D() = default;
-	float getPerimeter()const;
-	float getSquare()const;
+	ShapeTwoD() = delete;
+	ShapeTwoD(double perimeter = 0, double square = 0);
+	~ShapeTwoD() = default;
+	double getPerimeter()const;
+	double getSquare()const;
 
-	bool operator<(const Shape2D& right) const;
+	bool operator<(const ShapeTwoD& right) const;
 protected:
-	float perimeter_;
-	float square_;
+	double perimeter_;
+	double area_;
 };
 
 

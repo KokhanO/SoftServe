@@ -1,20 +1,22 @@
 #pragma once
 #include <string>
 #include "Shape2D.h"
-#include <exception>
-#
-class Triangle :public Shape2D
+
+class Triangle :public ShapeTwoD
 {
 public:
-	Triangle(std::string name, float a, float b, float c);
-	std::string getName()const;
-	float getSquare() const;
+	static const int kNumOfSides = 3;
 
-	static bool triangleExistence(const float a, const float b, const float c);
+	Triangle(const std::string& name, double a, double b, double c);
+	std::string getName()const;
+	double getSquare() const;
+
+	static bool triangleExistence(const double a, const double b, const double c);
+	static Triangle* getTriangle(const std::string& name, double a, double b, double c);
 private:
 	std::string name_;
-	float a_;
-	float b_;
-	float c_;
-	float semi_perimeter_;
+	double a_;
+	double b_;
+	double c_;
+	double semi_perimeter_;
 };

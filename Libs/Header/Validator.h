@@ -63,4 +63,23 @@ namespace Validator {
 		return true;
 	}
 
+	bool TryParseToDouble(const std::string data, double& outNum)
+	{
+		try
+		{
+			size_t pos;
+			outNum = stod(data, &pos);
+			if (data.size() != pos)
+			{
+				throw false;
+			}
+		}
+		catch (...)
+		{
+			outNum = 0;
+			return false;
+		}
+
+		return true;
+	}
 };

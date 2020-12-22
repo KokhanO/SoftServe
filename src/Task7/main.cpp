@@ -1,15 +1,22 @@
 #include <iostream>
+#include "Iterator.h"
+#include "Validator.h"
+#include "ConsoleInteraction.h"
 
-using namespace std;
-
-int main()
+int main(int argc, char** argv)
 {
-	int k;
-	cin >> k;
-
-	for (int i = 1; i * i < k; ++i)
+	long long border;
+	if (2 != argc || true != Validator::TryParseToLongLong(std::string(argv[1]), border))
 	{
-		cout << i << ',';
+		ConsoleInteraction::Manual();
+		return 0;
+	}
+
+	for (Iterator a(1); a < border; ++a)
+	{
+		std::cout << a.getNum() << ',';
 	}
 	
 }
+
+

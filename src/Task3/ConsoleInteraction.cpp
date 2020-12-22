@@ -32,25 +32,22 @@ bool ConsoleInteraction::cinContinueProgram()
 
 
 
-Triangle ConsoleInteraction::getTriangle()
+Triangle* ConsoleInteraction::getTriangle()
 {
 	ConsoleInteraction::coutManual();
 	std::string name;
 	std::getline(std::cin, name);
-
-	float arr[3];
-	for (int i = 0; i < 3; ++i)
+	
+	double sides[Triangle::kNumOfSides];
+	for (int i = 0; i < Triangle::kNumOfSides; ++i)
 	{
 		std::string tmp;
 		std::getline(std::cin, tmp);
-		if (false == Validator::TryParseToFloat(tmp, arr[i]) || arr[i] < 1)
+		if (!Validator::TryParseToDouble(tmp, sides[i]) || sides[i] < 1)
 		{
-			throw "invalid argumenst!\n";
+			return nullptr;
 		}
 	}
-	if (Triangle::triangleExistence(arr[0], arr[1], arr[2]))
-	{
-		return Triangle(name, arr[0], arr[1], arr[2]);
-	}
-	throw "invalid argumenst!\n";
+
+	return Triangle::getTriangle(name, sides[0], sides[1], sides[2]);
 }

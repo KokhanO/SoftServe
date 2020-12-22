@@ -10,6 +10,7 @@ public:
 	Cell(char texture, string piece);
 
 	void display();
+	char getTexture();
 
 	~Cell() = default;
 private:

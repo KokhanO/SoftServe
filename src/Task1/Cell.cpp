@@ -10,6 +10,11 @@ void Cell::display()
 	std::cout << texture_;
 }
 
+char Cell::getTexture()
+{
+	return texture_;
+}
+
 
 
 WhiteCell::WhiteCell(char texture, string piece) : Cell(texture, piece)

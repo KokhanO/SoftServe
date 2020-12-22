@@ -2,8 +2,14 @@
 #include "ConsoleInteraction.h"
 #include "TriangleSortedCollection.h"
 
-int main()
+int main(int argc, char** argv)
 {
+	if (1 != argc)
+	{
+		std::cout << "please run .exe without params" << std::endl;
+		return 0;
+	}
+
 	TriangleCollection a;
 	do
 	{

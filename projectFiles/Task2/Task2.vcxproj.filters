@@ -7,13 +7,13 @@
     <ClCompile Include="..\..\src\Task2\main.cpp">
       <Filter>Source</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\Task2\Shape2D.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\src\Task2\ConsoleDataParser.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\Task2\ConsoleInteraction.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Task2\2DShape.cpp">
       <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>
@@ -21,13 +21,13 @@
     <ClInclude Include="..\..\src\Task2\Letter.h">
       <Filter>Headers</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\Task2\Shape2D.h">
-      <Filter>Headers</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\src\Task2\ConsoleDataParser.h">
       <Filter>Headers</Filter>
     </ClInclude>
     <ClInclude Include="..\..\src\Task2\ConsoleInteraction.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Task2\2DShape.h">
       <Filter>Headers</Filter>
     </ClInclude>
   </ItemGroup>

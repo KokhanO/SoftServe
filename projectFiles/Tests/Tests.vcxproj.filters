@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\..\src\Task1\Cell.cpp">
+      <Filter>Task1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Task1\ChessBoard.cpp">
+      <Filter>Task1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Task1\ConsoleDisplayer.cpp">
+      <Filter>Task1</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Task2\Letter.cpp">
+      <Filter>Task2</Filter>
+    </ClCompile>
+    <ClCompile Include="Task1.cpp" />
+    <ClCompile Include="Task2.cpp" />
+    <ClCompile Include="Task3.cpp" />
+    <ClCompile Include="..\..\src\Task2\2DShape.cpp">
+      <Filter>Task2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Task3\Shape2D.cpp">
+      <Filter>Task3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Task3\Triangle.cpp">
+      <Filter>Task3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Task3\TriangleSortedCollection.cpp">
+      <Filter>Task3</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\Task3\ConsoleInteraction.cpp">
+      <Filter>Task3</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Task1">
+      <UniqueIdentifier>{0cdc8dff-6ce8-4ace-a6f2-2ee99062679f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Task2">
+      <UniqueIdentifier>{19a23c07-5e81-48ad-8d00-ca8bc651d030}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Task3">
+      <UniqueIdentifier>{9d76af97-b76e-409d-ade0-745050597c7f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
