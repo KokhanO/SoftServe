@@ -1,5 +1,5 @@
 #include "Triangle.h"
-
+#include <cmath>
 Triangle::Triangle(const std::string& name, const double a, const double b, const double c) : name_(name), ShapeTwoD((a + b + c), 0.0f), a_(a), b_(b), c_(c)
 {
 	semi_perimeter_ = perimeter_ / 2;
