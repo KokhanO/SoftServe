@@ -2,7 +2,6 @@
 #include "Generator.h"
 #include "Validator.h"
 #include "ConsoleInteraction.h"
-#include "Range.h"
 
 int main(int argc, char** argv)
 {
