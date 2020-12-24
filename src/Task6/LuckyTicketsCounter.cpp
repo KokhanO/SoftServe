@@ -1,5 +1,6 @@
 #include "LuckyTicketsCounter.h"
 #include <thread>
+#include <functional>
 
 int LuckyTicketsCounter::getNumOfPiterLuckyTicketsInRange(const int bottom_border, const int top_border)
 {
@@ -8,12 +9,12 @@ int LuckyTicketsCounter::getNumOfPiterLuckyTicketsInRange(const int bottom_borde
 	if (bottom_border < top_border / 2)
 	{
 		std::thread th(LuckyTicketsCounter::countPiterLuckyTicketsInRange, bottom_border, top_border / 2, std::ref(tmpTicketsThread1));
-		countPiterLuckyTicketsInRange(top_border / 2 + 1, top_border, tmpTicketsThread2);
+		countPiterLuckyTicketsInRange(top_border / 2 + 1, top_border, std::ref(tmpTicketsThread2));
 		th.join();
 	}
 	else
 	{
-		countMoscowLuckyTicketsInRange(bottom_border, top_border, tmpTicketsThread2);
+		countMoscowLuckyTicketsInRange(bottom_border, top_border, std::ref(tmpTicketsThread2));
 	}
 	return tmpTicketsThread1+tmpTicketsThread2;
 }
@@ -25,12 +26,12 @@ int LuckyTicketsCounter::getNumOfMoscowLuckyTicketsInRange(const int bottom_bord
 	if (bottom_border < top_border / 2)
 	{
 		std::thread th(LuckyTicketsCounter::countMoscowLuckyTicketsInRange, bottom_border, top_border / 2, std::ref(tmpTicketsThread1));
-		countMoscowLuckyTicketsInRange(top_border / 2 + 1, top_border, tmpTicketsThread2);
+		countMoscowLuckyTicketsInRange(top_border / 2 + 1, top_border, std::ref(tmpTicketsThread2));
 		th.join();
 	}
 	else
 	{
-		countMoscowLuckyTicketsInRange(bottom_border, top_border, tmpTicketsThread2);
+		countMoscowLuckyTicketsInRange(bottom_border, top_border, std::ref(tmpTicketsThread2));
 	}
 	return tmpTicketsThread1 + tmpTicketsThread2;
 }
