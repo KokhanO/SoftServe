@@ -18,15 +18,15 @@
     <ClCompile Include="..\..\src\Task7\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\Task7\Iterator.cpp">
+    <ClCompile Include="..\..\src\Task7\Generator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\src\Task7\Iterator.h">
+    <ClInclude Include="..\..\src\Task7\ConsoleInteraction.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\src\Task7\ConsoleInteraction.h">
+    <ClInclude Include="..\..\src\Task7\Generator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

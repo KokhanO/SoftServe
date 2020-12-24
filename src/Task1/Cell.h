@@ -1,40 +1,41 @@
-#pragma once
+#ifndef _CELL_H
+#define _CELL_H
+
 #include <string>
-#include <iostream>
+
 using namespace std;
 
-class Cell
-{
-public:
-	Cell() = delete;
-	Cell(char texture, string piece);
+class Cell {
+  public:
+    Cell() = delete;
 
-	void display();
-	char getTexture();
+    Cell(char texture, string piece);
 
-	~Cell() = default;
-private:
+    void display();
 
-	string piece_;
-	char texture_;
+    char getTexture();
+
+    ~Cell() = default;
+
+
+  private:
+    string piece_;
+
+    char texture_;
+
 };
+class WhiteCell : public Cell {
+  public:
+    WhiteCell() = delete;
 
+    WhiteCell(char texture, string piece = "0");
 
-class WhiteCell :public Cell
-{
-public:
-	WhiteCell() = delete;
-	WhiteCell(char texture, string piece = "0");
-
-private:
 };
+class BlackCell : public Cell {
+  public:
+    BlackCell() = delete;
 
+    BlackCell(char texture, string piece = "0");
 
-class BlackCell :public Cell
-{
-public:
-	BlackCell() = delete;
-	BlackCell(char texture, string piece = "0");
-	
-private:
 };
+#endif

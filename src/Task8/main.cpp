@@ -1,7 +1,5 @@
-#include <iostream>
 #include "ConsoleInteraction.h"
 #include "Validator.h"
-
 
 
 int main(int argc, char** argv)

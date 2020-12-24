@@ -1,13 +1,7 @@
-#include "ConsoleDisplayer.h"
-#include "Validator.h"
-#include "Cell.h"
-#include "ChessBoard.h"
+#include <iostream>
+#include 
 
-void coutManual()
-{
-	std::cout << "Pass on two unsigned short numbers representing "
-		<< "rows and columns" << std::endl;
-}
+
 
 int main(int argc, char** argv)
 {
@@ -49,4 +43,3 @@ int main(int argc, char** argv)
 
 
 }
-

@@ -1,4 +1,5 @@
 #include "ConsoleDisplayer.h"
+#include <iostream>
 
 void ConsoleInteraction::DisplayChessBoard(ChessBoard& chess_board)
 {

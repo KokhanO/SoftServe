@@ -1,12 +1,14 @@
 #include "ChessBoard.h"
+#include "Cell.h"
 
 ChessBoard::ChessBoard(const unsigned short rows, const unsigned short columns): rows_(rows), columns_(columns)
 {
 
+
 }
 
-void ChessBoard::fillBoard(const WhiteCell& white_cell, const BlackCell& black_cell)
-{
+void ChessBoard::fillBoard(const WhiteCell& white_cell, const BlackCell& black_cell) {
+
 	for (int i = 0; i < columns_; ++i)
 	{
 		for (int j = 0; j < rows_; ++j)
@@ -24,13 +26,13 @@ void ChessBoard::fillBoard(const WhiteCell& white_cell, const BlackCell& black_c
 	}
 }
 
+unsigned short ChessBoard::getRows() {
 
-unsigned short ChessBoard::getRows()
-{
 	return rows_;
 }
 
-unsigned short ChessBoard::getColumns()
-{
+unsigned short ChessBoard::getColumns() {
+
 	return columns_;
 }
+

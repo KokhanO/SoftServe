@@ -1,6 +1,7 @@
+#include "Triangle.h"
+#include "TriangleSortedCollection.h"
 #include <iostream>
 #include "ConsoleInteraction.h"
-#include "TriangleSortedCollection.h"
 
 int main(int argc, char** argv)
 {

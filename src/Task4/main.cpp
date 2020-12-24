@@ -1,16 +1,6 @@
-#include <iostream>
-#include <fstream>
-#include <sstream>
 #include "ConsoleInteraction.h"
 #include "StringComparer.h"
 #include "Validator.h"
-
-std::string getPath(std::string solutionPath)
-{
-	size_t found = solutionPath.find_last_of("/\\");
-	found = solutionPath.substr(0, found).find_last_of("/\\");
-	return (solutionPath.substr(0, found) + "/");
-}
 
 int main(int argc, char** argv)
 {

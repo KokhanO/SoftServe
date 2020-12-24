@@ -1,21 +1,23 @@
 #include "Shape2D.h"
 
-ShapeTwoD::ShapeTwoD(double perimeter, double square) :perimeter_(perimeter), area_(square)
+Shape2D::Shape2D(double perimeter, double square) :perimeter_(perimeter), area_(square)
 {
+
 
 }
 
-double ShapeTwoD::getPerimeter() const
-{
+double Shape2D::getPerimeter() const {
+
 	return perimeter_;
 }
 
-double ShapeTwoD::getSquare() const
-{
+double Shape2D::getArea() const {
+
 	return area_;
 }
 
-bool ShapeTwoD::operator<(const ShapeTwoD& right) const
-{
+bool Shape2D::operator <(const Shape2D& right) const {
+
 	return area_ < right.area_;
 }
+

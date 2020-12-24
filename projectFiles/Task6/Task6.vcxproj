@@ -142,10 +142,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\Task6\ConsoleInteraction.cpp" />
+    <ClCompile Include="..\..\src\Task6\LuckyTicketsCounter.cpp" />
     <ClCompile Include="..\..\src\Task6\main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\Task6\ConsoleInteraction.h" />
+    <ClInclude Include="..\..\src\Task6\LuckyTicketsCounter.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -5,7 +5,7 @@ Triangle a("Triangle1", 3.0f, 4.0f, 5.0f);
 //----------------------------------Task3------------------------------------//
 TEST(Triangle, getters) {
 	EXPECT_EQ("Triangle1", a.getName());
-	EXPECT_EQ(6.0f, a.getSquare());
+	EXPECT_EQ(6.0f, a.getArea());
 	EXPECT_EQ(12.0f, a.getPerimeter());
 }
 

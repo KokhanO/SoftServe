@@ -1,19 +1,23 @@
 #pragma once
-class ShapeTwoD
-{
-public:
-	ShapeTwoD() = delete;
-	ShapeTwoD(double perimeter = 0, double square = 0);
-	~ShapeTwoD() = default;
-	double getPerimeter()const;
-	double getSquare()const;
 
-	bool operator<(const ShapeTwoD& right) const;
-protected:
-	double perimeter_;
-	double area_;
+class Shape2D {
+  public:
+    Shape2D() = delete;
+
+    Shape2D(double perimeter = 0, double square = 0);
+
+    ~Shape2D() = default;
+
+    double getPerimeter() const;
+
+    double getArea() const;
+
+    bool operator <(const Shape2D & right) const;
+
+
+  protected:
+    double perimeter_;
+
+    double area_;
+
 };
-
-
-
-

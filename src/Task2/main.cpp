@@ -1,10 +1,3 @@
-#include <iostream>
-
-#include "Letter.h"
-#include "ConsoleDataParser.h"
-#include "ConsoleInteraction.h"
-
-
 int main(int argc, char** argv)
 {
 	

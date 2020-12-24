@@ -21,9 +21,15 @@
     <ClCompile Include="..\..\src\Task6\ConsoleInteraction.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\Task6\LuckyTicketsCounter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\Task6\ConsoleInteraction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\Task6\LuckyTicketsCounter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
